@@ -13,7 +13,7 @@ export default class App extends Component {
     return (
 
 
-      <View>
+      <View style={{flex:1}}>
 
         <Header></Header>
 

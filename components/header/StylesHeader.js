@@ -2,9 +2,10 @@ import { StyleSheet }  from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
+      flex: 1,
       backgroundColor: '#A020F0',
       flexDirection: 'row',
-      alignItems: 'center'
+      justifyContent: 'flex-start',
     },
      
     titulo: {

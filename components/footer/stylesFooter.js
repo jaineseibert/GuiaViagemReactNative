@@ -1,9 +1,20 @@
-import { StyleSheet }  from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    container: {
-      // My styles
-    },
-  });
+  container: {
+    flex:1,
+    backgroundColor: 'black',
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
   
-  export default styles;
+    
+  },
+
+  titulo: {
+    fontSize: 22,
+    color: '#FFFFFF',
+
+  }
+});
+
+export default styles;

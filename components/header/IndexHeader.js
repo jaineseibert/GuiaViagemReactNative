@@ -11,7 +11,7 @@ export default class Header extends Component {
     return (
       <View style={styles.container} >
         <Logo altura='64' largura='64' />
-        <Text style={styles.titulo}>Guia de viagens</Text>
+        <Text style={styles.titulo}>Lista de viagens</Text>
       </View>
     );
   }

@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import {
-  View
+  View,
+  Text
 } from 'react-native';
 import styles from './stylesFooter';
 
 export default class Footer extends Component {
   render() {
     return (
-      <View style={styles.container} />
+      <View style={styles.container}>
+        <Text style={styles.titulo}>Jaíne Seibert</Text>
+      </View>
     );
   }
 }
