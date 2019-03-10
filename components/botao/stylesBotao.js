@@ -3,8 +3,8 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   
   botao: {
-    width: 240,
-    height: 50,
+    width: 190,
+    height: 40,
     borderWidth: 2,
     borderColor: 'red',
     borderRadius: 25

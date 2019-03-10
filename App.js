@@ -5,6 +5,7 @@ import {
 import Header from './components/header/IndexHeader';
 import Lista from './components/lista/IndexLista';
 import Footer from './components/footer/IndexFooter';
+import styles from './components/styles';
 
 export default class App extends Component {
 
@@ -13,7 +14,7 @@ export default class App extends Component {
     return (
 
 
-      <View style={{flex:1}}>
+      <View style={styles.container}>
 
         <Header></Header>
 

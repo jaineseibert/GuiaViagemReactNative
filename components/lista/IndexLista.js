@@ -17,9 +17,10 @@ export default class Lista extends Component {
     super(props)
     this.state = {
       text: "",
-      itens: [ ]
+      itens: []
     }
     this.inserirItem = this.inserirItem.bind(this)
+    this.limpar = this.limpar.bind(this)
   }
 
   renderItem(obj) {
@@ -37,11 +38,11 @@ export default class Lista extends Component {
         desc: this.state.text,
         done: false
       }
-  
+
       let itens = this.state.itens;
       itens.push(newItem)
       this.setState({ itens })
-  
+
       let text = ""
       this.setState({ text })
     } else {
@@ -49,13 +50,28 @@ export default class Lista extends Component {
     }
   }
 
+  limpar() {
+    let state = this.state;
+
+    state = {
+      text: "",
+      itens: []
+    }
+
+    this.setState(state);
+
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <FlatList data={this.state.itens} renderItem={this.renderItem} extraData={this.state} />
-        <View>
-          <TextInput onChangeText={(text)=>{this.setState({text})}} value={this.state.text}/>
-          <Botao titulo='Inserir' onPress={this.inserirItem}></Botao>
+        <View style={styles.container}>
+          <TextInput style={styles.texto} onChangeText={(text) => { this.setState({ text }) }} value={this.state.text} />
+          <View style={styles.containerBotoes}>
+            <Botao titulo='Inserir' onPress={this.inserirItem}></Botao>
+            <Botao titulo='Limpar' onPress={this.limpar}></Botao>
+          </View>
         </View>
       </View>
     );
